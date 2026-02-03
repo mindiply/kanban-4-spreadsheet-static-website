@@ -24879,10 +24879,9 @@ const stringify = function() {
 };
 
 function DownloadCSVButton(props) {
-  const records = createMemo(() => props.tblDataSource.getRecords());
   const onClick = async e => {
     e.preventDefault();
-    const recs = records().map(r => omit(r, "__excel_internal_row_index"));
+    const recs = props.tblDataSource.getRecords().map(r => omit(r, "__excel_internal_row_index"));
     const csvContent = await new Promise(resolve => {
       stringify(recs, {
         header: true
@@ -24907,7 +24906,7 @@ function DownloadCSVButton(props) {
       return props.class;
     },
     get disabled() {
-      return records().length === 0;
+      return props.tblDataSource.getRecords().length === 0;
     },
     onClick,
     variant: "contained",
