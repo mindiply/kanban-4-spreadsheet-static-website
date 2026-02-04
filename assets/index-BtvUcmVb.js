@@ -9490,7 +9490,7 @@ function addToColumnString(colStr, increment) {
   return result;
 }
 
-var _tmpl$$r = /* @__PURE__ */ template(`<span><button class="border border-blue-800 rounded text-blue-800 hover:bg-blue-100 hover:cursor-pointer px-4 py-2"></button><input class=hidden type=file id=fileInput accept=.csv,.xlsx,.xls>`);
+var _tmpl$$u = /* @__PURE__ */ template(`<span><button class="border border-blue-800 rounded text-blue-800 hover:bg-blue-100 hover:cursor-pointer px-4 py-2"></button><input class=hidden type=file id=fileInput accept=.csv,.xlsx,.xls>`);
 function ImportCsvOrExcelButton(props) {
   let fileInputRef;
   async function handleFileSelected(event) {
@@ -9566,7 +9566,7 @@ function ImportCsvOrExcelButton(props) {
     }
   }
   return (() => {
-    var _el$ = getNextElement(_tmpl$$r), _el$2 = _el$.firstChild, _el$3 = _el$2.nextSibling;
+    var _el$ = getNextElement(_tmpl$$u), _el$2 = _el$.firstChild, _el$3 = _el$2.nextSibling;
     _el$2.$$click = () => {
       fileInputRef?.click();
     };
@@ -9614,7 +9614,24 @@ function useDataSourceSetupContext() {
   return useContext(DataSourceSetupContext);
 }
 
-var _tmpl$$q = /* @__PURE__ */ template(`<div><h1 class="p-8 text-xl text-blue-950>"><div class=text-center>Kanban your Spreadsheet by <a class=text-blue-800 href=https://mindiply.com>Mindiply</a></div><div class="mt-4 text-italic text-sm text-center text-gray-700">Manage your spreadsheet data on a Kanban board.</div></h1><div class="w-10/12 max-w-[720px] mb-16"><img></div><!$><!/><h2 class=mt-16>How does it work?</h2><!$><!/><!$><!/><!$><!/><!$><!/>`), _tmpl$2$8 = /* @__PURE__ */ template(`<div class="flex flex-nowrap items-center my-8"><div class="w-16 h-16 mr-8 rounded-full bg-blue-800 text-white flex items-center justify-center"></div><div class="p-4 flex items-center w-[400px]"><div><!$><!/><p>`), _tmpl$3$4 = /* @__PURE__ */ template(`<h3 class="font-bold text-blue-800 mb-2">`);
+var _tmpl$$t = /* @__PURE__ */ template(`<a class="text-blue-600 hover:text-blue-300 cursor-pointer">`);
+function ActionLink(props) {
+  const navigate = useNavigate();
+  return (() => {
+    var _el$ = getNextElement(_tmpl$$t);
+    _el$.$$click = (e) => {
+      e.preventDefault();
+      navigate(props.href);
+    };
+    insert(_el$, () => props.children);
+    createRenderEffect(() => setAttribute(_el$, "href", props.href));
+    runHydrationEvents();
+    return _el$;
+  })();
+}
+delegateEvents(["click"]);
+
+var _tmpl$$s = /* @__PURE__ */ template(`<div><h1 class="p-8 text-xl text-blue-950>"><div class=text-center>Kanban your Spreadsheet by <a class=text-blue-800 href=https://mindiply.com>Mindiply</a></div><div class="mt-4 text-italic text-sm text-center text-gray-700">Manage your spreadsheet data on a Kanban board.</div></h1><div class="w-10/12 max-w-[720px] mb-16"><img></div><!$><!/><h2 class="mt-16 text-lg">How does it work?</h2><!$><!/><!$><!/><!$><!/><!$><!/><p class="my-20 italic text-gray-700">For a bit more information before jumping in, look at the <!$><!/>.`), _tmpl$2$8 = /* @__PURE__ */ template(`<div class="flex flex-nowrap items-center my-8"><div class="w-16 h-16 mr-8 rounded-full bg-blue-800 text-white flex items-center justify-center"></div><div class="p-4 flex items-center w-[400px]"><div><!$><!/><p>`), _tmpl$3$4 = /* @__PURE__ */ template(`<h3 class="font-bold text-blue-800 mb-2">`);
 function Landing(props) {
   const navigate = useNavigate();
   const [, controller] = useDataSourceSetupContext();
@@ -9624,7 +9641,7 @@ function Landing(props) {
     console.log(loc.pathname);
   });
   return (() => {
-    var _el$ = getNextElement(_tmpl$$q), _el$2 = _el$.firstChild, _el$3 = _el$2.nextSibling, _el$4 = _el$3.firstChild, _el$6 = _el$3.nextSibling, [_el$7, _co$] = getNextMarker(_el$6.nextSibling), _el$5 = _el$7.nextSibling, _el$8 = _el$5.nextSibling, [_el$9, _co$2] = getNextMarker(_el$8.nextSibling), _el$0 = _el$9.nextSibling, [_el$1, _co$3] = getNextMarker(_el$0.nextSibling), _el$10 = _el$1.nextSibling, [_el$11, _co$4] = getNextMarker(_el$10.nextSibling), _el$12 = _el$11.nextSibling, [_el$13, _co$5] = getNextMarker(_el$12.nextSibling);
+    var _el$ = getNextElement(_tmpl$$s), _el$2 = _el$.firstChild, _el$3 = _el$2.nextSibling, _el$4 = _el$3.firstChild, _el$10 = _el$3.nextSibling, [_el$11, _co$2] = getNextMarker(_el$10.nextSibling), _el$5 = _el$11.nextSibling, _el$12 = _el$5.nextSibling, [_el$13, _co$3] = getNextMarker(_el$12.nextSibling), _el$14 = _el$13.nextSibling, [_el$15, _co$4] = getNextMarker(_el$14.nextSibling), _el$16 = _el$15.nextSibling, [_el$17, _co$5] = getNextMarker(_el$16.nextSibling), _el$18 = _el$17.nextSibling, [_el$19, _co$6] = getNextMarker(_el$18.nextSibling), _el$6 = _el$19.nextSibling, _el$7 = _el$6.firstChild, _el$0 = _el$7.nextSibling, [_el$1, _co$] = getNextMarker(_el$0.nextSibling); _el$1.nextSibling;
     setAttribute(_el$4, "src", KanbanScreenshot);
     insert(_el$, createComponent(ImportCsvOrExcelButton, {
       onDatasourceLoaded: (dataSources) => {
@@ -9640,46 +9657,50 @@ function Landing(props) {
         navigate("/setup");
       },
       children: "Import Excel or CSV File"
-    }), _el$7, _co$);
+    }), _el$11, _co$2);
     insert(_el$, createComponent(UsageStep, {
       stepNumber: 1,
       title: "Import your data",
       children: "Import an Excel or CSV file containing your data."
-    }), _el$9, _co$2);
+    }), _el$13, _co$3);
     insert(_el$, createComponent(UsageStep, {
       stepNumber: 2,
       title: "Choose the data and set up the fields",
-      children: "Select the fields to use as columns and the ones for the cards' label."
-    }), _el$1, _co$3);
+      children: "Select the fields to use as columns and the ones for the cards' labels."
+    }), _el$15, _co$4);
     insert(_el$, createComponent(UsageStep, {
       stepNumber: 3,
       title: "Kanban time!",
       children: "Drag and drop the cards between columns. Switch the field to group the cards by."
-    }), _el$11, _co$4);
+    }), _el$17, _co$5);
     insert(_el$, createComponent(UsageStep, {
       stepNumber: 4,
       title: "Save your changes",
       children: "Export your updated data back to Excel or CSV format."
-    }), _el$13, _co$5);
-    createRenderEffect(() => className(_el$, `${props.class || ""} flex flex-col flex-nowrap overflow-hidden items-center justify-center`));
+    }), _el$19, _co$6);
+    insert(_el$6, createComponent(ActionLink, {
+      href: "/help",
+      children: "Help page"
+    }), _el$1, _co$);
+    createRenderEffect(() => className(_el$, `${props.class || ""} flex flex-col flex-nowrap overflow-hidden items-center justify-center font-roboto`));
     return _el$;
   })();
 }
 function UsageStep(props) {
   return (() => {
-    var _el$14 = getNextElement(_tmpl$2$8), _el$15 = _el$14.firstChild, _el$16 = _el$15.nextSibling, _el$17 = _el$16.firstChild, _el$19 = _el$17.firstChild, [_el$20, _co$6] = getNextMarker(_el$19.nextSibling), _el$18 = _el$20.nextSibling;
-    insert(_el$15, () => props.stepNumber);
-    insert(_el$17, (() => {
+    var _el$20 = getNextElement(_tmpl$2$8), _el$21 = _el$20.firstChild, _el$22 = _el$21.nextSibling, _el$23 = _el$22.firstChild, _el$25 = _el$23.firstChild, [_el$26, _co$7] = getNextMarker(_el$25.nextSibling), _el$24 = _el$26.nextSibling;
+    insert(_el$21, () => props.stepNumber);
+    insert(_el$23, (() => {
       var _c$ = memo(() => !!props.title);
       return () => _c$() ? (() => {
-        var _el$21 = getNextElement(_tmpl$3$4);
-        insert(_el$21, () => props.title);
-        return _el$21;
+        var _el$27 = getNextElement(_tmpl$3$4);
+        insert(_el$27, () => props.title);
+        return _el$27;
       })() : null;
-    })(), _el$20, _co$6);
-    insert(_el$18, () => props.children);
-    createRenderEffect(() => className(_el$18, `text-gray-900 ${props.title ? " text-sm font-light" : ""}`));
-    return _el$14;
+    })(), _el$26, _co$7);
+    insert(_el$24, () => props.children);
+    createRenderEffect(() => className(_el$24, `text-gray-900 ${props.title ? " text-sm font-light" : ""}`));
+    return _el$20;
   })();
 }
 
@@ -12558,7 +12579,7 @@ const Box = $$I.component(function Box2({
   }));
 });
 
-var _tmpl$$p = /* @__PURE__ */ template(`<span>`);
+var _tmpl$$r = /* @__PURE__ */ template(`<span>`);
 const $$H = createComponentFactory()({
   name: "MuiRipple",
   selfPropNames: ["class", "classes", "pulsate", "rippleX", "rippleY", "rippleSize", "in", "onExited", "timeout"]
@@ -12607,7 +12628,7 @@ const Ripple = $$H.component(function Ripple2({
       return otherProps.sx;
     },
     get children() {
-      var _el$ = getNextElement(_tmpl$$p);
+      var _el$ = getNextElement(_tmpl$$r);
       createRenderEffect(() => className(_el$, childClassName()));
       return _el$;
     }
@@ -14883,7 +14904,7 @@ function createEffectWithCleaning(effect) {
     });
 }
 
-var _tmpl$$o = /* @__PURE__ */ template(`<textarea>`), _tmpl$2$7 = /* @__PURE__ */ template(`<textarea aria-hidden readonly tabindex=-1>`);
+var _tmpl$$q = /* @__PURE__ */ template(`<textarea>`), _tmpl$2$7 = /* @__PURE__ */ template(`<textarea aria-hidden readonly tabindex=-1>`);
 const $$u = createComponentFactory()({
   name: "MuiTextareaAutosize",
   selfPropNames: ["ref", "maxRows", "minRows"]
@@ -14993,7 +15014,7 @@ const TextareaAutosize = $$u.defineComponent(function(props) {
     padding: 0
   });
   return [(() => {
-    var _el$ = getNextElement(_tmpl$$o);
+    var _el$ = getNextElement(_tmpl$$q);
     use(ref, _el$);
     spread(_el$, mergeProps({
       get rows() {
@@ -16025,7 +16046,7 @@ const NativeSelectInput = function NativeSelectInput2(props) {
   })];
 };
 
-var _tmpl$$n = /* @__PURE__ */ template(`<span>`), _tmpl$2$6 = /* @__PURE__ */ template(`<span class=notranslate>&#8203;`);
+var _tmpl$$p = /* @__PURE__ */ template(`<span>`), _tmpl$2$6 = /* @__PURE__ */ template(`<span class=notranslate>&#8203;`);
 const $$q = createComponentFactory()({
   name: "MuiNotchedOutline",
   selfPropNames: ["disabled", "error", "focused", "label", "notched"]
@@ -16124,7 +16145,7 @@ const NotchedOutline = $$q.component(function NotchedOutline2({
               );
             },
             get children() {
-              var _el$ = getNextElement(_tmpl$$n);
+              var _el$ = getNextElement(_tmpl$$p);
               insert(_el$, () => props.label);
               return _el$;
             }
@@ -16311,7 +16332,7 @@ generateUtilityClasses("MuiSvgIcon", [
     "fontSizeLarge",
 ]);
 
-var _tmpl$$m = /* @__PURE__ */ template(`<title>`);
+var _tmpl$$o = /* @__PURE__ */ template(`<title>`);
 const $$o = createComponentFactory()({
   name: "MuiSvgIcon",
   selfPropNames: ["children", "classes", "color", "fontSize", "htmlColor", "inheritViewBox", "shapeRendering", "titleAccess", "viewBox"],
@@ -16402,7 +16423,7 @@ const SvgIcon = $$o.component(function SvgIcon2({
           return props.titleAccess;
         },
         children: (titleAccess) => (() => {
-          var _el$ = getNextElement(_tmpl$$m);
+          var _el$ = getNextElement(_tmpl$$o);
           insert(_el$, titleAccess);
           return _el$;
         })()
@@ -16422,8 +16443,8 @@ function createSvgIcon(path, displayName) {
   return Component;
 }
 
-var _tmpl$$l = /* @__PURE__ */ template(`<svg><path d="M7 10l5 5 5-5z"></svg>`, false, true, false);
-const ArrowDropDownIcon = createSvgIcon(() => getNextElement(_tmpl$$l), "ArrowDropDown");
+var _tmpl$$n = /* @__PURE__ */ template(`<svg><path d="M7 10l5 5 5-5z"></svg>`, false, true, false);
+const ArrowDropDownIcon = createSvgIcon(() => getNextElement(_tmpl$$n), "ArrowDropDown");
 
 function getListUtilityClass(slot) {
     return generateUtilityClass("MuiList", slot);
@@ -18237,7 +18258,7 @@ const selectClasses = generateUtilityClasses("MuiSelect", [
     "nativeInput",
 ]);
 
-var _tmpl$$k = /* @__PURE__ */ template(`<span class=notranslate>&#8203;`);
+var _tmpl$$m = /* @__PURE__ */ template(`<span class=notranslate>&#8203;`);
 const $$c = createComponentFactory()({
   name: "MuiSelectInput",
   selfPropNames: ["autoFocus", "autoWidth", "defaultOpen", "disabled", "IconComponent", "inputRef", "MenuProps", "multiple", "name", "native", "onBlur", "onChange", "onClose", "onFocus", "onOpen", "open", "readOnly", "renderValue", "SelectDisplayProps", "tabIndex", "value", "variant"],
@@ -18645,7 +18666,7 @@ const SelectInput = $$c.defineComponent(function SelectInput2(props) {
     const v = display();
     return isEmpty(v) ? (
       // notranslate needed while Google Translate will not fix zero-width space issue
-      getNextElement(_tmpl$$k)
+      getNextElement(_tmpl$$m)
     ) : v;
   };
   return [createComponent(SelectSelect, mergeProps({
@@ -19135,14 +19156,14 @@ const SwitchBase = $$a.component(function SwitchBase2({
   }));
 });
 
-var _tmpl$$j = /* @__PURE__ */ template(`<svg><path d="M19 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.11 0 2-.9 2-2V5c0-1.1-.89-2-2-2zm-9 14l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"></svg>`, false, true, false);
-const CheckBoxIcon = createSvgIcon(() => getNextElement(_tmpl$$j), "CheckBox");
+var _tmpl$$l = /* @__PURE__ */ template(`<svg><path d="M19 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.11 0 2-.9 2-2V5c0-1.1-.89-2-2-2zm-9 14l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"></svg>`, false, true, false);
+const CheckBoxIcon = createSvgIcon(() => getNextElement(_tmpl$$l), "CheckBox");
 
-var _tmpl$$i = /* @__PURE__ */ template(`<svg><path d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"></svg>`, false, true, false);
-const CheckBoxOutlineBlankIcon = createSvgIcon(() => getNextElement(_tmpl$$i), "CheckBoxOutlineBlank");
+var _tmpl$$k = /* @__PURE__ */ template(`<svg><path d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"></svg>`, false, true, false);
+const CheckBoxOutlineBlankIcon = createSvgIcon(() => getNextElement(_tmpl$$k), "CheckBoxOutlineBlank");
 
-var _tmpl$$h = /* @__PURE__ */ template(`<svg><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-2 10H7v-2h10v2z"></svg>`, false, true, false);
-const IndeterminateCheckBoxIcon = createSvgIcon(() => getNextElement(_tmpl$$h), "IndeterminateCheckBox");
+var _tmpl$$j = /* @__PURE__ */ template(`<svg><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-2 10H7v-2h10v2z"></svg>`, false, true, false);
+const IndeterminateCheckBoxIcon = createSvgIcon(() => getNextElement(_tmpl$$j), "IndeterminateCheckBox");
 
 function getCheckboxUtilityClass(slot) {
     return generateUtilityClass("MuiCheckbox", slot);
@@ -19683,7 +19704,7 @@ const TableRow = $$4.component(function TableRow2({
   }));
 });
 
-var _tmpl$$g = /* @__PURE__ */template(`<div>No datasource selected or no data to load`),
+var _tmpl$$i = /* @__PURE__ */template(`<div>No datasource selected or no data to load`),
   _tmpl$2$5 = /* @__PURE__ */template(`<div>`),
   _tmpl$3$3 = /* @__PURE__ */template(`<div class="text-sm text-gray-600">&nbsp;`);
 function RecordsPreview(props) {
@@ -19866,33 +19887,37 @@ function RecordsPreview(props) {
           return !currentDS();
         },
         get children() {
-          return getNextElement(_tmpl$$g);
+          return getNextElement(_tmpl$$i);
         }
       })];
     }
   });
 }
 
-var _tmpl$$f = /* @__PURE__ */ template(`<div class="h-16 flex-shrink-0 z-10 grow-0 shrink-0 w-full flex items-center justify-between flex-nowrap bg-gray-100 shadow-lg px-8 z-40"><h1 class="text-xl font-bold text-gray-700">Kanban your Spreadsheet by <a href=https://mindiply.com class="text-blue-900 hover:text-blue-950 underline"target=_blank rel="noopener noreferrer">Mindiply`);
-function TopBar() {
-  return getNextElement(_tmpl$$f);
+var _tmpl$$h = /* @__PURE__ */ template(`<div class="h-16 flex-shrink-0 z-10 grow-0 shrink-0 w-full flex items-center justify-between flex-nowrap bg-gray-100 shadow-lg px-8 z-40"><h1 class="text-xl font-bold text-gray-700">Kanban your Spreadsheet by <a href=https://mindiply.com class="text-blue-900 hover:text-blue-950 underline"target=_blank rel="noopener noreferrer">Mindiply</a></h1><div>`);
+function TopBar(props) {
+  return (() => {
+    var _el$ = getNextElement(_tmpl$$h), _el$2 = _el$.firstChild, _el$3 = _el$2.nextSibling;
+    insert(_el$3, () => props.children);
+    return _el$;
+  })();
 }
 
-var _tmpl$$e = /* @__PURE__ */ template(`<div class="w-full shrink-0 grow-0 flex flex-row justify-between items-center h-28 px-8 bg-slate-100">`);
+var _tmpl$$g = /* @__PURE__ */ template(`<div class="w-full shrink-0 grow-0 flex flex-row justify-between items-center h-28 px-8 bg-slate-100">`);
 function ToolBar(props) {
   return (() => {
-    var _el$ = getNextElement(_tmpl$$e);
+    var _el$ = getNextElement(_tmpl$$g);
     insert(_el$, () => props.children);
     return _el$;
   })();
 }
 
-var _tmpl$$d = /* @__PURE__ */template(`<div class="w-full h-screen overflow-hidden flex flex-col flex-nowrap items-center"><!$><!/><!$><!/><div class="w-11/12 my-16 overflow-auto flex-grow flex flex-col flex-nowrap items-stretch"></div><div class="mx-8 flex-shrink-0 flex-grow-0 w-full flex justify-around flex-nowrap my-16"><!$><!/><!$><!/><!$><!/>`);
+var _tmpl$$f = /* @__PURE__ */template(`<div class="w-full h-screen overflow-hidden flex flex-col flex-nowrap items-center"><!$><!/><!$><!/><div class="w-11/12 my-16 overflow-auto flex-grow flex flex-col flex-nowrap items-stretch"></div><div class="mx-8 flex-shrink-0 flex-grow-0 w-full flex justify-around flex-nowrap my-16"><!$><!/><!$><!/><!$><!/>`);
 function DataSourceSettings(props) {
   const navigate = useNavigate();
-  const [, controller] = useDataSourceSetupContext();
+  const [setupData, controller] = useDataSourceSetupContext();
   return (() => {
-    var _el$ = getNextElement(_tmpl$$d),
+    var _el$ = getNextElement(_tmpl$$f),
       _el$0 = _el$.firstChild,
       [_el$1, _co$4] = getNextMarker(_el$0.nextSibling),
       _el$10 = _el$1.nextSibling,
@@ -19905,10 +19930,24 @@ function DataSourceSettings(props) {
       [_el$7, _co$2] = getNextMarker(_el$6.nextSibling),
       _el$8 = _el$7.nextSibling,
       [_el$9, _co$3] = getNextMarker(_el$8.nextSibling);
-    insert(_el$, createComponent(TopBar, {}), _el$1, _co$4);
+    insert(_el$, createComponent(TopBar, {
+      get children() {
+        return createComponent(ActionLink, {
+          href: "/help",
+          children: "Help"
+        });
+      }
+    }), _el$1, _co$4);
     insert(_el$, createComponent(ToolBar, {
       get children() {
-        return [createComponent(SelectTableDataSource, {}), createComponent(ImportCsvOrExcelButton, {
+        return [createComponent(Show, {
+          get when() {
+            return setupData().dataSources.length > 0;
+          },
+          get children() {
+            return createComponent(SelectTableDataSource, {});
+          }
+        }), createComponent(ImportCsvOrExcelButton, {
           onDatasourceLoaded: dataSources => {
             const dss = Array.isArray(dataSources) ? dataSources : [dataSources];
             let switched = false;
@@ -19958,8 +19997,8 @@ function DataSourceSettings(props) {
   })();
 }
 
-var _tmpl$$c = /* @__PURE__ */ template(`<svg><g><g><g><path d="M20,9H4v2h16V9z M4,15h16v-2H4V15z"></svg>`, false, true, false);
-const DragHandleIcon = createSvgIcon(() => getNextElement(_tmpl$$c), "DragHandle");
+var _tmpl$$e = /* @__PURE__ */ template(`<svg><g><g><g><path d="M20,9H4v2h16V9z M4,15h16v-2H4V15z"></svg>`, false, true, false);
+const DragHandleIcon = createSvgIcon(() => getNextElement(_tmpl$$e), "DragHandle");
 
 const DND_TYPE_KANBAN_ITEM_CARD = "kanban-item-card";
 const DND_TYPE_KANBAN_COLUMN = "kanban-column";
@@ -19988,10 +20027,10 @@ function requireInteract_min () {
 var interact_minExports = /*@__PURE__*/ requireInteract_min();
 const interact = /*@__PURE__*/getDefaultExportFromCjs(interact_minExports);
 
-var _tmpl$$b = /* @__PURE__ */ template(`<div>`);
+var _tmpl$$d = /* @__PURE__ */ template(`<div>`);
 function ItemCard$1(props) {
   return (() => {
-    var _el$ = getNextElement(_tmpl$$b);
+    var _el$ = getNextElement(_tmpl$$d);
     var _ref$ = props.ref;
     typeof _ref$ === "function" ? use(_ref$, _el$) : props.ref = _el$;
     insert(_el$, () => props.item.label);
@@ -20115,7 +20154,7 @@ function KanbanItemCard(props) {
   })];
 }
 
-var _tmpl$$a = /* @__PURE__ */template(`<div>`),
+var _tmpl$$c = /* @__PURE__ */template(`<div>`),
   _tmpl$2$4 = /* @__PURE__ */template(`<div><div class="font-bold my-3 mx-3 flex items-center flex-nowrap"><!$><!/><div class="ml-2 flex-grow-1"></div><div class="text-gray-500 text-sm">(<!$><!/>)</div></div><div class="w-full flex-grow-1 overflow-y-auto pb-3"><div class="w-full flex flex-col flex-nowrap gap-3">`),
   _tmpl$3$2 = /* @__PURE__ */template(`<span class="italic text-gray-500">(No Value)`),
   _tmpl$4$1 = /* @__PURE__ */template(`<span>&nbsp;`);
@@ -20144,7 +20183,7 @@ function FieldValueColumn(_props) {
         return props.showHandle;
       },
       get children() {
-        var _el$3 = getNextElement(_tmpl$$a);
+        var _el$3 = getNextElement(_tmpl$$c);
         var _ref$2 = props.handleDivRef;
         typeof _ref$2 === "function" ? use(_ref$2, _el$3) : props.handleDivRef = _el$3;
         insert(_el$3, createComponent(DragHandleIcon, {
@@ -20200,7 +20239,7 @@ function FieldValueColumn(_props) {
   })();
 }
 
-var _tmpl$$9 = /* @__PURE__ */ template(`<div class="invisible w-56 min-h-56 flex-grow-0 flex-shrink-0">Text that should not be visible`);
+var _tmpl$$b = /* @__PURE__ */ template(`<div class="invisible w-56 min-h-56 flex-grow-0 flex-shrink-0">Text that should not be visible`);
 function KanbanFieldColumn(props) {
   const [dragIconRef, setDragIconRef] = createSignal();
   const [divRef, setDivRef] = createSignal();
@@ -20339,7 +20378,7 @@ function KanbanFieldColumn(props) {
       return myDnd().role === "source";
     },
     get children() {
-      var _el$ = getNextElement(_tmpl$$9);
+      var _el$ = getNextElement(_tmpl$$b);
       use(setPlaceholderRef, _el$);
       return _el$;
     }
@@ -20405,7 +20444,7 @@ function KanbanFieldColumn(props) {
   })];
 }
 
-var _tmpl$$8 = /* @__PURE__ */ template(`<div>`);
+var _tmpl$$a = /* @__PURE__ */ template(`<div>`);
 function FieldsValuesColumns(props) {
   const [state] = useItemsByFieldValuesContext();
   const [dndState] = useDragInteractionManager();
@@ -20421,7 +20460,7 @@ function FieldsValuesColumns(props) {
     return kanbanState.valuesColumns;
   });
   return (() => {
-    var _el$ = getNextElement(_tmpl$$8);
+    var _el$ = getNextElement(_tmpl$$a);
     insert(_el$, createComponent(For, {
       get each() {
         return state().valuesColumns;
@@ -20487,7 +20526,7 @@ function IndexMoveColumn(props) {
     return dnd && dnd.source && dnd.source.type === DND_TYPE_KANBAN_COLUMN && dnd.source.payload.currentColumnIndex === props.columnIndex;
   });
   return (() => {
-    var _el$2 = getNextElement(_tmpl$$8);
+    var _el$2 = getNextElement(_tmpl$$a);
     var _ref$ = divRef;
     typeof _ref$ === "function" ? use(_ref$, _el$2) : divRef = _el$2;
     insert(_el$2, () => props.children);
@@ -25299,11 +25338,11 @@ const ToggleButtonGroup = $$2.component(function ToggleButtonGroup2({
   });
 });
 
-var _tmpl$$7 = /* @__PURE__ */ template(`<svg><g><path d="M19,3H5C3.9,3,3,3.9,3,5v14c0,1.1,0.9,2,2,2h14c1.1,0,2-0.9,2-2V5C21,3.9,20.1,3,19,3z M9,17H7V7h2V17z M13,12h-2V7h2V12z M17,15h-2V7h2V15z"></svg>`, false, true, false);
-const KanbanView = createSvgIcon(() => getNextElement(_tmpl$$7), "ViewKanban");
+var _tmpl$$9 = /* @__PURE__ */ template(`<svg><g><path d="M19,3H5C3.9,3,3,3.9,3,5v14c0,1.1,0.9,2,2,2h14c1.1,0,2-0.9,2-2V5C21,3.9,20.1,3,19,3z M9,17H7V7h2V17z M13,12h-2V7h2V12z M17,15h-2V7h2V15z"></svg>`, false, true, false);
+const KanbanView = createSvgIcon(() => getNextElement(_tmpl$$9), "ViewKanban");
 
-var _tmpl$$6 = /* @__PURE__ */ template(`<svg><g fill-rule=evenodd><path d="M0 0h24v24H0z"fill=none></path><path d="M3 3v8h8V3H3zm6 6H5V5h4v4zm-6 4v8h8v-8H3zm6 6H5v-4h4v4zm4-16v8h8V3h-8zm6 6h-4V5h4v4zm-6 4v8h8v-8h-8zm6 6h-4v-4h4v4z"></svg>`, false, true, false);
-const MatrixView = createSvgIcon(() => getNextElement(_tmpl$$6), "GridView");
+var _tmpl$$8 = /* @__PURE__ */ template(`<svg><g fill-rule=evenodd><path d="M0 0h24v24H0z"fill=none></path><path d="M3 3v8h8V3H3zm6 6H5V5h4v4zm-6 4v8h8v-8H3zm6 6H5v-4h4v4zm4-16v8h8V3h-8zm6 6h-4V5h4v4zm-6 4v8h8v-8h-8zm6 6h-4v-4h4v4z"></svg>`, false, true, false);
+const MatrixView = createSvgIcon(() => getNextElement(_tmpl$$8), "GridView");
 
 function SwitchMatrixKanban(props) {
   const navigate = useNavigate();
@@ -25334,11 +25373,11 @@ function SwitchMatrixKanban(props) {
   });
 }
 
-var _tmpl$$5 = /* @__PURE__ */ template(`<div class="grow flex items-center justify-center flex-col flex-nowrap"><div class="text-lg text-red-950 my-8">No datasource selected</div><div><a class="bold text-blue-900 underline"href=/setup>Go back to setup`);
+var _tmpl$$7 = /* @__PURE__ */ template(`<div class="grow flex items-center justify-center flex-col flex-nowrap"><div class="text-lg text-red-950 my-8">No datasource selected</div><div><a class="bold text-blue-900 underline"href=/setup>Go back to setup`);
 function NoDatasource() {
   const navigate = useNavigate();
   return (() => {
-    var _el$ = getNextElement(_tmpl$$5), _el$2 = _el$.firstChild, _el$3 = _el$2.nextSibling, _el$4 = _el$3.firstChild;
+    var _el$ = getNextElement(_tmpl$$7), _el$2 = _el$.firstChild, _el$3 = _el$2.nextSibling, _el$4 = _el$3.firstChild;
     _el$4.$$click = (e) => {
       e.preventDefault();
       navigate("/setup");
@@ -25349,17 +25388,24 @@ function NoDatasource() {
 }
 delegateEvents(["click"]);
 
-var _tmpl$$4 = /* @__PURE__ */template(`<div class="w-full h-screen overflow-hidden flex flex-col flex-nowrap items-center"><!$><!/><!$><!/>`),
+var _tmpl$$6 = /* @__PURE__ */template(`<div class="w-full h-screen overflow-hidden flex flex-col flex-nowrap items-center"><!$><!/><!$><!/>`),
   _tmpl$2$3 = /* @__PURE__ */template(`<div><!$><!/><div class="w-full flex-grow-0 flex-shrink-0 flex justify-around flex-nowrap overflow-hidden my-16"><!$><!/><div class="flex flex-nowrap"><div class=mr-4></div><!$><!/>`);
-function KanbanPage() {
+function KanbanPage$1() {
   const [setupState, setupController] = useDataSourceSetupContext();
   return (() => {
-    var _el$ = getNextElement(_tmpl$$4),
+    var _el$ = getNextElement(_tmpl$$6),
       _el$2 = _el$.firstChild,
       [_el$3, _co$] = getNextMarker(_el$2.nextSibling),
       _el$4 = _el$3.nextSibling,
       [_el$5, _co$2] = getNextMarker(_el$4.nextSibling);
-    insert(_el$, createComponent(TopBar, {}), _el$3, _co$);
+    insert(_el$, createComponent(TopBar, {
+      get children() {
+        return createComponent(ActionLink, {
+          href: "/help",
+          children: "Help"
+        });
+      }
+    }), _el$3, _co$);
     insert(_el$, createComponent(Switch, {
       get children() {
         return [createComponent(Match, {
@@ -25694,7 +25740,7 @@ function ItemCard(props) {
   });
 }
 
-var _tmpl$$3 = /* @__PURE__ */ template(`<div>`), _tmpl$2$2 = /* @__PURE__ */ template(`<div class="cell-scroll z-10 relative"><div class="flex w-full flex-col items-center justify-center">`);
+var _tmpl$$5 = /* @__PURE__ */ template(`<div>`), _tmpl$2$2 = /* @__PURE__ */ template(`<div class="cell-scroll z-10 relative"><div class="flex w-full flex-col items-center justify-center">`);
 function MatrixCell(props) {
   const [divRef, setDivRef] = createSignal();
   const [dndState, dndDispatch] = useDragInteractionManager();
@@ -25777,7 +25823,7 @@ function MatrixCell(props) {
 }
 function Cell(props) {
   return [(() => {
-    var _el$ = getNextElement(_tmpl$$3);
+    var _el$ = getNextElement(_tmpl$$5);
     var _ref$ = props.ref;
     typeof _ref$ === "function" ? use(_ref$, _el$) : props.ref = _el$;
     createRenderEffect(() => className(_el$, `absolute inset-0${props.class ? ` ${props.class}` : ""}`));
@@ -25796,19 +25842,19 @@ function Cell(props) {
   })()];
 }
 
-var _tmpl$$2 = /* @__PURE__ */ template(`<tr>`);
+var _tmpl$$4 = /* @__PURE__ */ template(`<tr>`);
 function RowAtIndex(props) {
   const [dndState, dndDispatch] = useDragInteractionManager();
   const isDroppingHere = createMemo(() => false);
   return (() => {
-    var _el$ = getNextElement(_tmpl$$2);
+    var _el$ = getNextElement(_tmpl$$4);
     insert(_el$, () => props.children);
     createRenderEffect(() => className(_el$, `relative${props.class ? ` ${props.class}` : ""}${isDroppingHere() ? " bg-gray-100" : ""}`));
     return _el$;
   })();
 }
 
-var _tmpl$$1 = /* @__PURE__ */ template(`<table class=matrix><thead><tr><th>&nbsp;</th><!$><!/></tr></thead><tbody>`), _tmpl$2$1 = /* @__PURE__ */ template(`<th>`), _tmpl$3$1 = /* @__PURE__ */ template(`<td>`), _tmpl$4 = /* @__PURE__ */ template(`<td class=relative>`);
+var _tmpl$$3 = /* @__PURE__ */ template(`<table class=matrix><thead><tr><th>&nbsp;</th><!$><!/></tr></thead><tbody>`), _tmpl$2$1 = /* @__PURE__ */ template(`<th>`), _tmpl$3$1 = /* @__PURE__ */ template(`<td>`), _tmpl$4 = /* @__PURE__ */ template(`<td class=relative>`);
 function RecordsByMatrix(props) {
   const rows = createMemo(() => {
     const matrix = props.matrixState;
@@ -25827,7 +25873,7 @@ function RecordsByMatrix(props) {
     });
   });
   return (() => {
-    var _el$ = getNextElement(_tmpl$$1), _el$2 = _el$.firstChild, _el$3 = _el$2.firstChild, _el$4 = _el$3.firstChild, _el$5 = _el$4.nextSibling, [_el$6, _co$] = getNextMarker(_el$5.nextSibling), _el$7 = _el$2.nextSibling;
+    var _el$ = getNextElement(_tmpl$$3), _el$2 = _el$.firstChild, _el$3 = _el$2.firstChild, _el$4 = _el$3.firstChild, _el$5 = _el$4.nextSibling, [_el$6, _co$] = getNextMarker(_el$5.nextSibling), _el$7 = _el$2.nextSibling;
     insert(_el$3, createComponent(For, {
       get each() {
         return props.matrixState.columnAxis.values;
@@ -25881,18 +25927,25 @@ function RecordsByMatrix(props) {
   })();
 }
 
-var _tmpl$ = /* @__PURE__ */template(`<div class="w-full h-screen overflow-hidden flex flex-col flex-nowrap items-center"><!$><!/><!$><!/>`),
+var _tmpl$$2 = /* @__PURE__ */template(`<div class="w-full h-screen overflow-hidden flex flex-col flex-nowrap items-center"><!$><!/><!$><!/>`),
   _tmpl$2 = /* @__PURE__ */template(`<div class="flex flex-nowrap"><div class=mr-4></div><div>`),
   _tmpl$3 = /* @__PURE__ */template(`<div><div></div><div class="w-full flex-grow-0 flex-shrink-0 flex justify-around flex-nowrap overflow-hidden my-16"><!$><!/><div class="flex flex-nowrap"><div class=mr-4></div><!$><!/>`);
 function MatrixScreen() {
   const matrixApi = useContext(RecordsByMatrixContext);
   return (() => {
-    var _el$ = getNextElement(_tmpl$),
+    var _el$ = getNextElement(_tmpl$$2),
       _el$2 = _el$.firstChild,
       [_el$3, _co$] = getNextMarker(_el$2.nextSibling),
       _el$4 = _el$3.nextSibling,
       [_el$5, _co$2] = getNextMarker(_el$4.nextSibling);
-    insert(_el$, createComponent(TopBar, {}), _el$3, _co$);
+    insert(_el$, createComponent(TopBar, {
+      get children() {
+        return createComponent(ActionLink, {
+          href: "/help",
+          children: "Help"
+        });
+      }
+    }), _el$3, _co$);
     insert(_el$, createComponent(Switch, {
       get children() {
         return [createComponent(Match, {
@@ -26023,18 +26076,76 @@ function InternalMatrixScreen(props) {
   })()];
 }
 
-function Kanban4SpreadsheetApp() {
+var _tmpl$$1 = /* @__PURE__ */ template(`<a href=mailto:info@mindiply.com>`);
+function ContactUs(props) {
+  return (() => {
+    var _el$ = getNextElement(_tmpl$$1);
+    insert(_el$, () => props.children || "contact us");
+    return _el$;
+  })();
+}
+
+const LandingPage = "/assets/LandingPage-CE-B5i3P.png";
+
+const DataSetup = "/assets/data-setup-DCJCZB_l.png";
+
+const KanbanPage = "/assets/KanbanPage-BXXml5HA.png";
+
+const MatrixPage = "/assets/MatrixPage-vqUqwTqN.png";
+
+var _tmpl$ = /* @__PURE__ */ template(`<div class="w-full h-screen overflow-hidden flex flex-col flex-nowrap items-center"><!$><!/><div class="w-full flex-grow overflow-y-auto"><div class="w-11/12 max-w-3xl mx-auto mindiply-blog pb-16"><h1>User guide</h1><p><span class=font-bold>Kanban your spreadsheet</span> lets you change field values graphically.</p><p>The application does not operate directly on the files you imported. The changes you make have to be re-exported to a csv or Excel file.</p><p>Please, <span class=text-red-800>do not overwrite your original file</span>, especially if it is an Excel file, as we are unable to re-export your formatting and formulas at this time.</p><p>The suggested process to re-import the data after you modified it using our tool is:</p><p class=pl-4> 1. Import the data into <span class=font-bold>Kanban your spreadsheet</span>.</p><p class=pl-4>2. Export the data to a new spreadsheet after changing it in <span class=font-bold>Kanban your spreadsheet</span>.</p><p class=pl-4> 3. Copy the records in the exported spreadsheet.</p><p class=pl-4> 4. Paste the records in a copy of your original spreadsheet.</p><p>We plan for a more efficient process in the future. Please <!$><!/> what you would like the process to be!</p><h2>The landing page</h2><img><p>It all starts with an import. Select a csv or Excel file, and click on the Open button. Should nothing happen, we are unable to find data to process. Please <!$><!/>; we may be able to fix it.</p><h2>Setting up the data source</h2><img><p>The data setup page is where you define which fields you want to change their values, and optionally, which fields make up the label for the cards that correspond to the records.</p><p>When you tick the checkbox in the row <span class=bold>Can be used in kanban</span>, that field will be one you can choose to assign values to in the Matrix and Kanban screens. When we import your data, we exclude fields with too many distinct values.</p><p>When you tick the checkbox in the row <span class=bold>Used for label field</span>, we will use that field to generate the label for the cards representing the records in the spreadsheet you imported. You can deselect all the fields, and the order in which you select them will determine the label's structure.</p><p>We only show a few of the records you imported to demonstrate how we understand your data and make it easier for you to choose the fields you want to work with.</p><p>Once you are happy with your setting, go to either the Kanban or Matrix view using the buttons at the bottom of the screen.</p><p>Don't worry too much about getting everything right; you can always come back to this screen to change the settings.</p><p>You can also import new data from this screen using the <span class=bold>Add Excel or CSV file</span>.</p><p>If you imported multiple data sources, or if you imported an Excel file that has multiple sheets with data, you can switch to a specific table of records using the <span class=bold>Select data source</span> drop-down button at the top-left of the screen.</p><h2>The Kanban screen</h2><img><p>On the Kanban page, you can change the value of a field at a time. Each value is represented by a column, with its value at the top. Within the column, each card represents a record in your spreadsheet. You can change the value of that field by moving the cards from one column to the other.</p><p>If you don't like the order of the values, you can drag and drop the column to the left or right.</p><p>After you finish assigning values to one field, you can use the <span class=font-bold>Field to filter by</span> drop-down to switch to a different field.</p><p>You can save your changes by clicking on either the <span class=font-bold>Download Excel Workbook</span> or <span class=font-bold>Download CSV</span> button.</p><p>The small button switch in the top-right corner lets you quickly toggle between the matrix and kanban screens.</p><p>If you click on the <span class=font-bold>Data source setting</span> link in the bottom-left corner of the screen, you can change the data source settings.</p><h2>The matrix Screen</h2><img><p>The matrix page creates a matrix with the values of two fields in your spreadsheet.</p><p>If you have urgency and importance, for instance, you've just got yourself an Eisenhower matrix.</p><p>This page works similarly to the Kanban page, but when you move a card between cells, you are changing two field values at the same time.</p><p>The <span class=font-bold>Row field</span> and <span class=font-bold>Column field</span> drop-down buttons allow you to change what field is used for each axis.</p><h1>FAQ</h1><h4>When would I use this tool?</h4><p>You use spreadsheets to manage a list of items, but you'd prefer a graphical interface to assign some of the fields. If, for instance, you have a product backlog, you may like to assign a KANO type by drag-and-drop, and also get an idea of the distribution of records across the potential values.</p><h4>What about the cookie notice?</h4><p>This app runs only on your browser; there is no back-end server that it communicates with. We don't collect any information at all. Still, feel free to <!$><!/>!</p><h4>I would like the tool to do XYZ?</h4><p>We have a <a href=https://mindiply.com/products/decido/decisions/OF5L1QaT2o1KHQ target=_blank rel="noreferrer noopener">permanent poll</a> where you can express your preference as to what we will work on next.</p><p>If the feature you want or the bug you found is not there, feel free to <!$><!/>. We'd love to hear from you.`);
+function HelpScreen() {
+  return (() => {
+    var _el$ = getNextElement(_tmpl$), _el$64 = _el$.firstChild, [_el$65, _co$5] = getNextMarker(_el$64.nextSibling), _el$2 = _el$65.nextSibling, _el$3 = _el$2.firstChild, _el$4 = _el$3.firstChild, _el$5 = _el$4.nextSibling, _el$6 = _el$5.nextSibling, _el$7 = _el$6.nextSibling, _el$8 = _el$7.nextSibling, _el$9 = _el$8.nextSibling, _el$0 = _el$9.nextSibling, _el$1 = _el$0.nextSibling, _el$10 = _el$1.nextSibling, _el$11 = _el$10.nextSibling, _el$12 = _el$11.firstChild, _el$15 = _el$12.nextSibling, [_el$16, _co$] = getNextMarker(_el$15.nextSibling); _el$16.nextSibling; var _el$17 = _el$11.nextSibling, _el$18 = _el$17.nextSibling, _el$19 = _el$18.nextSibling, _el$20 = _el$19.firstChild, _el$22 = _el$20.nextSibling, [_el$23, _co$2] = getNextMarker(_el$22.nextSibling); _el$23.nextSibling; var _el$24 = _el$19.nextSibling, _el$25 = _el$24.nextSibling, _el$26 = _el$25.nextSibling, _el$27 = _el$26.nextSibling, _el$28 = _el$27.nextSibling, _el$29 = _el$28.nextSibling, _el$30 = _el$29.nextSibling, _el$31 = _el$30.nextSibling, _el$32 = _el$31.nextSibling, _el$33 = _el$32.nextSibling, _el$34 = _el$33.nextSibling, _el$35 = _el$34.nextSibling, _el$36 = _el$35.nextSibling, _el$37 = _el$36.nextSibling, _el$38 = _el$37.nextSibling, _el$39 = _el$38.nextSibling, _el$40 = _el$39.nextSibling, _el$41 = _el$40.nextSibling, _el$42 = _el$41.nextSibling, _el$43 = _el$42.nextSibling, _el$44 = _el$43.nextSibling, _el$45 = _el$44.nextSibling, _el$46 = _el$45.nextSibling, _el$47 = _el$46.nextSibling, _el$48 = _el$47.nextSibling, _el$49 = _el$48.nextSibling, _el$50 = _el$49.nextSibling, _el$51 = _el$50.nextSibling, _el$52 = _el$51.nextSibling, _el$53 = _el$52.firstChild, _el$55 = _el$53.nextSibling, [_el$56, _co$3] = getNextMarker(_el$55.nextSibling); _el$56.nextSibling; var _el$57 = _el$52.nextSibling, _el$58 = _el$57.nextSibling, _el$59 = _el$58.nextSibling, _el$60 = _el$59.firstChild, _el$62 = _el$60.nextSibling, [_el$63, _co$4] = getNextMarker(_el$62.nextSibling); _el$63.nextSibling;
+    insert(_el$, createComponent(TopBar, {
+      get children() {
+        return createComponent(ActionLink, {
+          href: "/setup",
+          children: "Data Setup"
+        });
+      }
+    }), _el$65, _co$5);
+    insert(_el$11, createComponent(ContactUs, {
+      children: "let us know"
+    }), _el$16, _co$);
+    setAttribute(_el$18, "src", LandingPage);
+    insert(_el$19, createComponent(ContactUs, {
+      children: "let us know"
+    }), _el$23, _co$2);
+    setAttribute(_el$25, "src", DataSetup);
+    setAttribute(_el$35, "src", KanbanPage);
+    setAttribute(_el$43, "src", MatrixPage);
+    insert(_el$52, createComponent(ContactUs, {
+      children: "get in touch with us"
+    }), _el$56, _co$3);
+    insert(_el$59, createComponent(ContactUs, {
+      children: "drop us an Email"
+    }), _el$63, _co$4);
+    return _el$;
+  })();
+}
+
+function Kanban4SpreadsheetApp(props) {
+  const merged = mergeProps({
+    url: "/"
+  }, props);
   return createComponent(DataSourceSetupProvider, {
     get children() {
       return createComponent(DndManagerProvider, {
         get children() {
-          return createComponent(Kanban4SpreadsheetAppRouter, {});
+          return createComponent(Kanban4SpreadsheetAppRouter, {
+            get url() {
+              return merged.url;
+            }
+          });
         }
       });
     }
   });
 }
-function Kanban4SpreadsheetAppRouter() {
+function Kanban4SpreadsheetAppRouter(props = {
+  url: "/"
+}) {
   return createComponent(Router, {
     get url() {
       return "";
@@ -26048,10 +26159,13 @@ function Kanban4SpreadsheetAppRouter() {
         component: DataSourceSettings
       }), createComponent(Route, {
         path: "/kanban",
-        component: KanbanPage
+        component: KanbanPage$1
       }), createComponent(Route, {
         path: "/matrix",
         component: MatrixScreen
+      }), createComponent(Route, {
+        path: "/help",
+        component: HelpScreen
       })];
     }
   });
@@ -26059,4 +26173,4 @@ function Kanban4SpreadsheetAppRouter() {
 
 const root = document.getElementById("root");
 const r = hydrate;
-r(Kanban4SpreadsheetApp, root);
+r(() => createComponent(Kanban4SpreadsheetApp, {}), root);
